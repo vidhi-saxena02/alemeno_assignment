@@ -23,7 +23,7 @@ const studentSlice = createSlice({
     },
     removeCourse: (state, action) => {
       const updated = state.courseEnrolledInformation.filter((course) => {
-        return course.courseID !== action.payload.courseID;
+        return course.courseID !== action.payload;
       });
       state.courseEnrolledInformation = updated;
       state.courseEnrolled = state.courseEnrolledInformation.length;
@@ -31,7 +31,7 @@ const studentSlice = createSlice({
     markCompleted: (state, action) => {
       state.courseEnrolledInformation = state.courseEnrolledInformation.map(
         (course) =>
-          course.courseID === action.payload.courseID
+          course.courseID === action.payload
             ? { ...course, progress: 100, courseCompleted: true }
             : course
       );
@@ -39,7 +39,7 @@ const studentSlice = createSlice({
     markUncompleted: (state, action) => {
       state.courseEnrolledInformation = state.courseEnrolledInformation.map(
         (course) =>
-          course.courseID === action.payload.courseID
+          course.courseID === action.payload
             ? { ...course, progress: 0, courseCompleted: false }
             : course
       );

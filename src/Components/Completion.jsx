@@ -14,7 +14,12 @@ const Completion = ({ courseID, courseCompleted }) => {
 
   return (
     <div className="flex items-center gap-x-4">
-      <div>Mark Completed</div>
+      <div>
+        {" "}
+        {!courseCompleted
+          ? "Click to Mark Completed"
+          : "Click to Mark Uncomplete"}
+      </div>
       {courseCompleted ? (
         <button
           onClick={() => handleAction(courseID)}
