@@ -7,3 +7,5 @@
 # Start Frontend
 -In the alemeno_latest run npm run dev
   
+#Link to the project video
+- https://drive.google.com/file/d/1GdLRccpRXrtLCQg9QT9gIbOZmG-02OZa/view?usp=sharing
